@@ -1,7 +1,7 @@
 #include <iostream>
 using nampespace std;
 
-void SelectionSort(int arr[], int MAX) {
+void selectionsort(int arr[], int MAX) {
  int i, j;
  int min, temp;
  for(i=0; i<MAX-1; i++) {

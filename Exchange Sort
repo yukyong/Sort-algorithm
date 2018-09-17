@@ -3,7 +3,7 @@ using namespace std;
 
 void exchangesort (int n, int S[]) {
  int i, j;
- int tmp; //swap하려고
+ int tmp;
  for ( i = 1; i <= n - 1; i++ )
    for ( j = i + 1; j <= n; j++ )
  key++;

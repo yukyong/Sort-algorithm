@@ -2,7 +2,7 @@
 using namespace std;
 
 
-void merge(int low, int mid, int high) {
+void mergesort(int low, int mid, int high) {
  int i, j, k, t;
  int U[high];
  i = low; j = mid + 1; k = low;

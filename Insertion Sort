@@ -2,7 +2,7 @@
 using namespace std;
 
 
-void InsertionSort(int * arr){
+void insertionsort(int * arr){
  int i, j;
  int key;
  for(i=1; i< MAX_LEN; i++){

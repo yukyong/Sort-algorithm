@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+
+void partition(int low, int high, int& pivotpoint) {
+ int i, j;
+ int pivotitem;
+ pivotitem = S[low];
+ j = low;
+ int tmp;
+ for ( i = low + 1 ;  i <= high ; i++)
+ key++;
+   if ( S[i] < pivotitem ) {
+     j++;
+     SWAP(S[i], S[j], tmp);
+   }
+ pivotpoint = j;
+ SWAP(S[low], S[pivotpoint], tmp);
+}
+    
+void quicksort(int low, int high) {
+ int pivotpoint;
+ if ( high > low ) {
+   partition(low, high, pivotpoint);
+   quicksort(low, pivotpoint-1);
+   quicksort(pivotpoint+1, high);
+ }
+}

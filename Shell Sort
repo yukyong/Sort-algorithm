@@ -1,17 +1,17 @@
 #include <iostream>
 using namespace std;
 
-void Shellsort(int A[], int n) {
+void shellsort(int a[], int n) {
  int i, j, k;
  int t; 
  for(k=n/2; k>0; k/=2) 
    for(i=k; i<n; i++) { 
-    t=A[i];
+    t=a[i];
     for(j=i; j>=k; j-=k) 
-     if(t < A[j-k]) 
-      A[j]=A[j-k]; 
+     if(t < a[j-k]) 
+      a[j]=a[j-k]; 
      else 
       break;
-    A[j]=t; 
+    a[j]=t; 
   }
 } 

@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+
+
+void merge(int low, int mid, int high) {
+ int i, j, k, t;
+ int U[high];
+ i = low; j = mid + 1; k = low;
+ while ( i <= mid && j <= high) {
+   count++;
+   if ( S[i] < S[j] ) {
+ U[k] = S[i];
+ i++;
+   }
+   else {
+ U[k] = S[j];
+ j++;
+   }
+ }
+ if ( i > mid )
+  for( t = j ; t <= high ; t++ )
+   U[k++] = S[t];
+ else
+  for( t = i ; t <= high ; t++ )
+   U[k++] = S[t];
+ for( t = low ; t <= high ; t++ )
+   S[t] = U[t];
+}
+     
+void mergesort (int low, int high) {
+ int mid;
+ if ( low < high) {
+   mid = [ (low + high) / 2 ];
+   mergesort(low, mid);
+   mergesort(mid+1, high);
+   merge(low, mid, high);
+ }
+}
